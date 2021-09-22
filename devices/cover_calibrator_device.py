@@ -4,7 +4,7 @@ class CoverCalibratorDevice:
         self.__client_transaction_id = 0
         self.__client_id = 0
 
-        self.__description = "Observing Conditions Alpaca Device"
+        self.__description = "Cover Calibrator Alpaca Device"
         self.__driver_info = ""
         self.__driver_version = 1.0
         self.__name = "Cover Calibrator Device"
@@ -82,16 +82,16 @@ class CoverCalibratorDevice:
         return self.__max_brightness
 
     def calibrator_on(self):
-        pass
+        raise NotImplementedError
 
     def calibrator_off(self):
-        pass
+        raise NotImplementedError
 
     def close_cover(self):
-        pass
+        raise NotImplementedError
 
     def halt_cover(self):
-        pass
+        raise NotImplementedError
 
     def open_cover(self):
-        pass
+        raise NotImplementedError

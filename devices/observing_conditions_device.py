@@ -136,5 +136,4 @@ class ObservingConditionsDevice:
         return self.__wind_speed
 
     def refresh(self):
-        print("Refresh")
-        # DeviceDriver.logger.info("Refresh")
+        raise NotImplementedError

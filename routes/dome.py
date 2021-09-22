@@ -3,8 +3,6 @@ from flask import jsonify, request
 
 from devices.dome_device import DomeDevice
 
-import ascom_reply
-
 dome = Blueprint('dome', __name__)
 
 device = DomeDevice()

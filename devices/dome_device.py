@@ -1,12 +1,4 @@
-from enum import Enum, IntEnum
-
-
-class ShutterState(IntEnum):
-    shutterOpen = 0
-    shutterClosed = 1
-    shutterOpening = 2
-    shutterClosing = 3
-    shutterError = 4
+from ascom.enumerations import ShutterState
 
 
 class DomeDevice:
@@ -88,81 +80,69 @@ class DomeDevice:
     ##########################################
     @property
     def can_find_home(self):
-        print("CanFindHome")
         return self.__can_find_home
 
     @property
     def can_park(self):
-        print("CanPark")
         return self.__can_park
 
     @property
     def can_set_altitude(self):
-        print("CanSetAltitude")
         return self.__can_set_altitude
 
     @property
     def can_set_azimuth(self):
-        print("CanSetAzimuth")
         return self.__can_set_azimuth
 
     @property
     def can_set_park(self):
-        print("CanSetPark")
         return self.__can_set_park
 
     @property
     def can_set_shutter(self):
-        print("CanSetShutter")
         return self.__can_set_shutter
 
     @property
     def can_slave(self):
-        print("CanSlave")
         return self.__can_slave
 
     @property
     def can_sync_azimuth(self):
-        print("CanSyncAzimuth")
         return self.__can_sync_azimuth
 
     @property
     def shutter_status(self):
-        # Indicates whether the dome is in the home position. Raises an error if not supported.
-        # DeviceDriver.logger.info("ShutterStatus")
-        print("ShutterStatus called")
         return self.__shutter_status
 
     @property
     def slewing(self, *args, **kwargs):
-        print("Slewing called!")
         return self.__slewing
 
     @property
     def at_home(self):
-        print("AtHome called!")
         return self.__at_home
 
     @property
     def at_park(self):
-        print("AtPark called!")
         return self.__at_park
 
     @property
     def azimuth(self):
-        print("Azimuth called!")
         return self.__azimuth
 
     # ----------------------------------------------
 
     def close_shutter(self):
-        self.__shutter_status = ShutterState.shutterClosed  # TODO: Implement logic instead
+        raise NotImplementedError
+        # self.__shutter_status = ShutterState.shutterClosed
         # DeviceDriver.logger.info("Shutter is now closed")
 
     def open_shutter(self):
-        self.__shutter_status = ShutterState.shutterOpen  # TODO: Implement logic instead
+        raise NotImplementedError
+        # self.__shutter_status = ShutterState.shutterOpen
         # DeviceDriver.logger.info("Shutter is now open")
 
     def park(self):
-        self.__shutter_status = ShutterState.shutterOpen  # TODO: Implement logic instead
+        raise NotImplementedError
+        # self.__shutter_status = ShutterState.shutterOpen
         # DeviceDriver.logger.info("Dome is parking")
