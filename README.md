@@ -1,5 +1,5 @@
 # pyalpaca
-# WIP and versy much so
+# WIP and very much so!
 
 ASCOM Alpaca scaffolding using Flask REST. Started to develop this for controlling my
 OBS with RaspberryPi's. Any contribution is welcome!
